@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>2</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>318</x>
+      <y>102</y>
+      <w>48</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+UserRole
+--
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>112</y>
+      <w>20</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>218</x>
+      <y>82</y>
+      <w>44</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Datatype&gt;&gt;
+UserIdentity
+--
++ name: String {NotBlank}
++ surname: String {♫NotBlank}
++ email: String {NotBlank, Email}
++ / fullName: String {NotBlank}
+
+bg=orange
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>218</x>
+      <y>64</y>
+      <w>48</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>The full name catenates the 
+surname, a comma, and the name.
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>238</x>
+      <y>74</y>
+      <w>6</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>338</x>
+      <y>112</y>
+      <w>20</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>388</x>
+      <y>104</y>
+      <w>20</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Administrator
+--
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>388</x>
+      <y>88</y>
+      <w>20</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Anonymous
+--
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>388</x>
+      <y>118</y>
+      <w>20</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Authenticated
+--
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>96</y>
+      <w>28</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>106</y>
+      <w>28</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>106</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>218</x>
+      <y>110</y>
+      <w>44</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+CustomCommand
+--
++ LIST_TOP
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>130</y>
+      <w>40</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Provider
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>342</x>
+      <y>130</y>
+      <w>42</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Consumer
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>82</y>
+      <w>44</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Datatype&gt;&gt;
+Money
+--
++ amount: double {Digits(10, 2)}
++ currentcy: String {NotBlank}
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>102</y>
+      <w>44</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+BasicCommand
+--
++ LIST
++ SHOW
++ CREATE
++ UPDATE
++ DELETE
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>132</y>
+      <w>44</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+HttpMethod
+--
++ GET
++ POST
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>54</y>
+      <w>68</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+UserAccount
+--
++ username: String {Unique, NotBlank, Length(5, 60)}
++ password: String {NotBlank, Length(5, 60)}
++ enabled: boolean
++ identity: Identity {Valid}
++ / anonymous: boolean
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>78</y>
+      <w>14</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=1
+m2=*
+has v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>104</y>
+      <w>86</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+LaljBulletin
+--
++ event: String {NotBlank}
++ momentOfEvent: Date {NotNull, Temporal(TIMESTAMP)}
++ location: String {NotBlank}
++ cost: Money {NotNull, Valid}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>80</y>
+      <w>86</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+RodriguezBulletin
+--
++ informer: String {NotBlank}
++ type: String {NotBlank}
++ bulletinMoment: Date {Temporal(TIMESTAMP), Past} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>130</y>
+      <w>64</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Shout
+--
++ moment: Date {Temporal(TIMESTAMP), Past}
++ author: String {NotBlank}
++ text: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>154</y>
+      <w>62</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Announcement
+--
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ moreInfo: String {URL}
++ text: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>356</x>
+      <y>222</y>
+      <w>88</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Request
+--
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date {NotNull, Temporal(TIMESTAMP)}
++ text: String {NotBlank}
++ reward: Money {NotNull, Valid}
++ ticker: String {NotBlank, Pattern("^R[a-zA-Z]{4}[-]\\d{5}$"), Unique}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>294</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ title: String {NotBlank}
++ moment: Date {Temporal(TIMESTAMP), Past}
++ deadline: Date {NotNull, Temporal(TIMESTAMP)}
++ text: String {NotBlank}
++ minReward: Money {NotNull, Valid}
++ maxReward: Money {NotNull, Valid}
++ ticker: String {NotBlank, Pattern("^O[a-zA-Z]{4}[-]\\d{5}$"), Unique}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>156</y>
+      <w>122</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+CompanyRecord
+--
++ company: String {NotBlank}
++ sector: String {NotBlank}
++ CEO: String {NotBlank}
++ description: String {NotBlank}
++ web: String {NotBlank, URL}
++ phone: String {NotBlank, {Pattern("^(([+][1-9]{1}[0-9]{0,2}[ ])?)(([(][0-9]{1,4}[)][ ])?)[0-9]{6,10}$")}
++ email: String {NotBlank, Email}
++ incorporated: Boolean
++ stars: Integer {Min(0),Max(5)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>102</x>
+      <y>166</y>
+      <w>54</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>An incorporated company typically adds
+the "Inc." suffix to ther name, e.g.,
+"Acme, Inc.", whereas non-incorporated
+companies typically add the "LLC" suffix
+to their name, e.g., "Mi-kasa, LLC")
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>174</y>
+      <w>22</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>450</x>
+      <y>222</y>
+      <w>52</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Every request must have a unique 
+ticker that must match the following 
+pattern “RXXXX-99999”, where “R” is 
+letter “R”, “X” denotes an arbitrary 
+letter, and “9” denotes an arbitrary digit.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>466</x>
+      <y>294</y>
+      <w>52</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Every offer must have a unique 
+ticker that must match the following 
+pattern “OXXXX-99999”, where “O” is 
+letter “O”, “X” denotes an arbitrary 
+letter, and “9” denotes an arbitrary digit.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>306</y>
+      <w>14</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;80.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>196</y>
+      <w>48</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>Phone number must adhere to the 
+following pattern “+999 (9999) 
+999999”, where “+999” denotes an 
+optional international prefix in 
+range “+1” up to “+999”, “(9999)” 
+denotes an optional area code in 
+range “(0)” up to “(9999)”, and 
+“999999” denotes a local phone 
+number with a minimum of six digits 
+and a maximum of ten digits.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>180</y>
+      <w>24</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;120.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>202</y>
+      <w>42</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+InvestorRecord
+--
++ investor: String {NotBlank}
++ sector: String {NotBlank}
++ statement: String {NotBlank}
++ stars: Integer {Min(0), Max(5)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>164</x>
+      <y>232</y>
+      <w>82</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Challenge
+--
++ title: String {NotBlank}
++ deadline: Date {NotNull, Temporal(TIMESTAMP)}
++ description: String {NotBlank}
++ goldGoal: String {NotBlank}
++ silverGoal: String {NotBlank}
++ bronzeGoal: String {NotBlank}
++ goldReward: Money {NotNull, Valid}
++ silverReward: Money {NotNull, Valid}
++ bronzeReward: Money {NotNull, Valid}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>250</x>
+      <y>252</y>
+      <w>36</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>A challenge deadline must 
+be in future when it is 
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>244</y>
+      <w>26</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>110.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>58</y>
+      <w>44</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Level
+--
++ BRONZE
++ SILVER
++ GOLD
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>180</y>
+      <w>70</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Customisation
+--
++ spamWords: String {NotBlank}
++ spamThreshold: Double {NotNull, Min(0), Max(100)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>418</x>
+      <y>150</y>
+      <w>48</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ picture: String {NotBlank, URL}
++ slogan: String {NotBlank}
++ URL: String {NotBlank, URL}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>446</x>
+      <y>170</y>
+      <w>18</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>418</x>
+      <y>170</y>
+      <w>20</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>182</y>
+      <w>48</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Banner&gt;&gt;
+Non-CommercialBanner
+--
++ jingle: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>182</y>
+      <w>76</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Banner&gt;&gt;
+CommercialBanner
+--
++ holder: String {NotBlank}
++ expirationMonth: Integer {NotNull, Range(1,12)}
++ expirationYear: Integer {NotNull, Range(0,99)}
++ creditCardNumber: String {NotBlank, CreditCardNumber}
++ brand: String {NotBlank}
++ CVV: Integer {NotNull, Range(0,9999)}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>428</x>
+      <y>74</y>
+      <w>94</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Dashboard
+--
+- serialVersionUID: long
++ numberAnnouncements: Integer
++ numberCompanyRecords: Integer
++ numberInvestorRecords: Integer
++ minimumNumberOfRewardsOfActiveRequests: Double
++ maximumNumberOfRewardsOfActiveRequests: Double
++ averageNumberOfRewardsOfActiveRequests: Double
++ standardDesviationNumberOfRewardsOfActiveRequests: Double
++ minimumNumberOfRewardsOfActiveOffers: Double
++ maximumNumberOfRewardsOfActiveOffers: Double
++ averageNumberOfRewardsOfActiveOffers: Double
++ standardDesviationNumberOfRewardsOfActiveOffers: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>52</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Serializable
+
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>58</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>74</y>
+      <w>42</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+Chart
+--
+- serialVersionUID: long
++ companySector: List&lt;String&gt;
++ companyNumber: List&lt;Long&gt;
++ investorSector: List&lt;String&gt;
++ investorNumber: List&lt;Long&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>478</x>
+      <y>58</y>
+      <w>72</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>300</x>
+      <y>210</y>
+      <w>36</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>A request deadline must 
+be in future when it is 
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>334</x>
+      <y>216</y>
+      <w>28</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>302</x>
+      <y>278</y>
+      <w>36</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>An offer deadline must 
+be in future when it is 
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>284</y>
+      <w>42</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>240</y>
+      <w>38</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>A challenge reward must 
+have the right currency when 
+it is registered in the system,
+wich are EUR or €; 
+other currencies must be 
+rejected.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>246</y>
+      <w>30</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>130.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>246</y>
+      <w>30</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>130.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>246</y>
+      <w>30</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>130.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>282</y>
+      <w>46</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Bronze reward must be less 
+than silver and gold rewards
+when it is registered in the system. 
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>148</x>
+      <y>266</y>
+      <w>22</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>266</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Silver reward must be less 
+than gold reward when it 
+is registered in the system. 
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>142</x>
+      <y>262</y>
+      <w>28</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>302</x>
+      <y>324</y>
+      <w>46</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>The minimum reward must 
+be less than maximum reward 
+when it is registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>346</x>
+      <y>314</y>
+      <w>32</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;80.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>302</x>
+      <y>344</y>
+      <w>36</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>An offer ticker mustn't
+be in use when it is
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>322</y>
+      <w>42</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;140.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>302</x>
+      <y>296</y>
+      <w>38</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>An offer reward must 
+have the right currency when 
+it is registered in the system,
+wich are EUR or €; 
+other currencies must be 
+rejected.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>338</x>
+      <y>306</y>
+      <w>40</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>338</x>
+      <y>306</y>
+      <w>40</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>300</x>
+      <y>228</y>
+      <w>38</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>A request reward must 
+have the right currency when 
+it is registered in the system,
+wich are EUR or €; 
+other currencies must be 
+rejected.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>238</y>
+      <w>26</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>300</x>
+      <y>254</y>
+      <w>36</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>A request ticker mustn't
+be in use when it is
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>334</x>
+      <y>246</y>
+      <w>28</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;70.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>230</y>
+      <w>14</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;90.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>502</x>
+      <y>184</y>
+      <w>36</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>A spam word mustn't
+be existing when it is
+registered in the system.
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>186</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>312</x>
+      <y>178</y>
+      <w>40</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>The month must be equal or 
+posterior than current month
+if he or she has inserted
+the current year
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>184</y>
+      <w>24</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>312</x>
+      <y>194</y>
+      <w>40</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>The year must be equal or 
+posterior than current year
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>194</y>
+      <w>24</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;30.0;100.0;20.0</additional_attributes>
+  </element>
+</diagram>

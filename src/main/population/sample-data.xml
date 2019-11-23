@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+
+	<!--  Shouts -->
+		
+	<bean id="shout01" class="acme.entities.shouts.Shout">
+		<property name="author" value="Yassin Lalj"/>
+		<property name="text" value="Let's goooo!"/>
+		<property name="moment" value="2019/10/12 19:21"/>
+	</bean>
+	
+	<bean id="shout02" class="acme.entities.shouts.Shout">
+		<property name="author" value="Tingle"/>
+		<property name="text" value="I want more rupees!"/>
+		<property name="moment" value="1999/05/21 14:43"/>
+	</bean>
+	
+	<bean id="shout03" class="acme.entities.shouts.Shout">
+		<property name="author" value="Joker"/>
+		<property name="text" value="How about another joke?"/>
+		<property name="moment" value="2019/10/09 22:30"/>
+	</bean>
+	
+	<bean id="shout04" class="acme.entities.shouts.Shout">
+		<property name="author" value="Kawhi Leonard"/>
+		<property name="text" value="Ahhhaaaaa!!"/>
+		<property name="moment" value="2019/01/10 11:30"/>
+	</bean>
+	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="author" value="Jack Shephard"/>
+		<property name="text" value="What is Dharma?!"/>
+		<property name="moment" value="2007/02/27 22:56"/>
+	</bean>
+
+	<!--  LaljBulletin -->
+
+	<bean id="laljbulletin01" class="acme.entities.bulletins.LaljBulletin">
+		<property name="event" value="Guided visit to Alcazar"/>
+		<property name="momentOfEvent" value="2020/11/07 12:30"/>
+		<property name="location" value="Real Alcazar"/>
+		<property name="cost" value="3 EUR"/>
+	</bean>
+	
+	<bean id="laljbulletin02" class="acme.entities.bulletins.LaljBulletin">
+		<property name="event" value="Tour bus around Seville"/>
+		<property name="momentOfEvent" value="2020/05/23 11:50"/>
+		<property name="location" value="Prado San Sebastian"/>
+		<property name="cost" value="20 EUR"/>
+	</bean>
+	
+	<bean id="laljbulletin03" class="acme.entities.bulletins.LaljBulletin">
+		<property name="event" value="Concert of Sonia Fernandez"/>
+		<property name="momentOfEvent" value="2020/05/25 21:25"/>
+		<property name="location" value="Bar El Tablao"/>
+		<property name="cost" value="10 EUR"/>
+	</bean>
+	
+	<bean id="laljbulletin04" class="acme.entities.bulletins.LaljBulletin">
+		<property name="event" value="Concert of Jeshi Rush"/>
+		<property name="momentOfEvent" value="2020/05/28 22:30"/>
+		<property name="location" value="Cartuja Arena"/>
+		<property name="cost" value="60 EUR"/>
+	</bean>
+	
+	<!--  RodriguezBulletin -->
+	
+	<bean id="rodriguezbulletin01" class="acme.entities.bulletins.RodriguezBulletin">
+		<property name="informer" value="Mike Oldfield"/>
+		<property name="type" value="XSS"/>
+		<property name="bulletinMoment" value="2017/02/05 20:00"/>
+	</bean>
+	
+	<bean id="rodriguezbulletin02" class="acme.entities.bulletins.RodriguezBulletin">
+		<property name="informer" value="Robert Stevens"/>
+		<property name="type" value="DDOS"/>
+		<property name="bulletinMoment" value="2018/01/20 21:00"/>
+	</bean>
+	
+	<bean id="rodriguezbulletin03" class="acme.entities.bulletins.RodriguezBulletin">
+		<property name="informer" value="Benny Hill"/>
+		<property name="type" value="SQL Injection"/>
+		<property name="bulletinMoment" value="2016/05/02 22:30"/>
+	</bean>
+	
+	<bean id="rodriguezbulletin04" class="acme.entities.bulletins.RodriguezBulletin">
+		<property name="informer" value="John Ramírez"/>
+		<property name="type" value="XSS"/>
+		<property name="bulletinMoment" value="2015/04/17 18:00"/>
+	</bean>
+	
+	<!--  Announcements -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Graphic designer"/>
+		<property name="moment" value="2019/10/21 19:30"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a graphic designer for position as responsible for the visual image of the company."/>
+	</bean>
+
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Truck tire repairer"/>
+		<property name="moment" value="2019/06/15 11:49"/>
+		<property name="moreInfo"><null/></property>
+		<property name="text" value="Stable position is offered. Hours Monday through Friday from 08:30 a.m. to 1:00 p.m. and from 4:00 p.m. to 7:00 p.m."/>
+	</bean>
+	
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="HR Technician"/>
+		<property name="moment" value="1997/04/20 18:59"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a Human Resources Technician with at least 2 years of experience for our team."/>
+	</bean>
+	
+	<bean id="announcement04" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Business Intelligence analyst"/>
+		<property name="moment" value="2019/10/27 15:09"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a business intelligence analyst with at least 3 years of experience."/>
+	</bean>
+	
+	<bean id="announcement05" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Bartender"/>
+		<property name="moment" value="2019/09/25 18:52"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a bartender for our new Bar, the Bar Amaro."/>
+	</bean>
+	
+	<bean id="announcement06" class="acme.entities.announcements.Announcement">
+		<property name="title" value="TensorFlow analyst"/>
+		<property name="moment" value="2019/10/04 19:30"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a tensorflow analyst for our new startup."/>
+	</bean>
+	
+	<bean id="announcement07" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Chofer"/>
+		<property name="moment" value="2019/10/05 18:21"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a chofer for the new CEO of the company."/>
+	</bean>
+	
+	<bean id="announcement08" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Coacher"/>
+		<property name="moment" value="2019/10/06 18:15"/>
+		<property name="moreInfo" value="https://www.infojobs.net/"/>
+		<property name="text" value="We need a coach for motivate our testing team."/>
+	</bean>
+	
+	<!--  Requests -->
+	
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="title" value="Request for the vacant of java programmer"/>
+		<property name="moment" value="2019/09/25 18:52"/>
+		<property name="deadline" value="2020/10/25 22:00"/>
+		<property name="text" value="Hi, this is my request for the job."/>
+		<property name="reward" value="2400.0 EUR"/>
+		<property name="ticker" value="RXJAB-45312"/>		
+	</bean>
+	
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="title" value="Request for the vacant of python analyst"/>
+		<property name="moment" value="2019/03/02 13:15"/>
+		<property name="deadline" value="2020/01/12 12:00"/>
+		<property name="text" value="Hi there, this is my request for the job."/>
+		<property name="reward" value="2000.0 EUR"/>
+		<property name="ticker" value="RfJAa-45313"/>		
+	</bean>	
+	
+	<bean id="request03" class="acme.entities.requests.Request">
+		<property name="title" value="Request for the vacant of business intelligence analyst"/>
+		<property name="moment" value="2019/09/25 18:52"/>
+		<property name="deadline" value="2020/10/25 22:00"/>
+		<property name="text" value="Hi, this is my request."/>
+		<property name="reward" value="1000.0 EUR"/>
+		<property name="ticker" value="RCgAn-65572"/>		
+	</bean>	
+	
+	<!--  Offers -->
+	
+	<bean id="offer01" class="acme.entities.offers.Offer">
+		<property name="title" value="Offer for the vacant of java programmer"/>
+		<property name="moment" value="2019/09/25 18:52"/>
+		<property name="deadline" value="2020/10/25 22:00"/>
+		<property name="text" value="This is the offer for the job."/>
+		<property name="minReward" value="900.0 EUR"/>
+		<property name="maxReward" value="1600.0 EUR"/>
+		<property name="ticker" value="OXJAB-45312"/>		
+	</bean>
+	
+	<bean id="offer02" class="acme.entities.offers.Offer">
+		<property name="title" value="Offer for the vacant of python analyst"/>
+		<property name="moment" value="2019/03/02 13:15"/>
+		<property name="deadline" value="2020/01/12 12:00"/>
+		<property name="text" value="This is the offer for the job."/>
+		<property name="minReward" value="1400.0 EUR"/>
+		<property name="maxReward" value="1800.0 EUR"/>
+		<property name="ticker" value="OfJAa-45313"/>		
+	</bean>	
+	
+	<bean id="offer03" class="acme.entities.offers.Offer">
+		<property name="title" value="Offer for the vacant of business intelligence analyst"/>
+		<property name="moment" value="2019/09/25 18:52"/>
+		<property name="deadline" value="2020/10/25 22:00"/>
+		<property name="text" value="This is the offer for the job."/>
+		<property name="minReward" value="500.0 EUR"/>
+		<property name="maxReward" value="1500.0 EUR"/>
+		<property name="ticker" value="OCgAn-65572"/>		
+	</bean>	
+	
+	<!-- Company records -->
+	
+	<bean id="companyRecord01" class="acme.entities.companyRecords.CompanyRecord">
+		<property name="company" value="Apricot, Inc."/>
+		<property name="sector" value="Audit"/>
+		<property name="CEO" value="José García"/>
+		<property name="description" value="Record in audit"/>
+		<property name="web" value="http://www.Apricot.com"/>
+		<property name="phone" value="+123 (23) 637238"/>
+		<property name="email" value="apricot@mail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="4"/>		
+	</bean>
+	
+	<bean id="companyRecord02" class="acme.entities.companyRecords.CompanyRecord">
+		<property name="company" value="Olive, LLC"/>
+		<property name="sector" value="Computer Fixing"/>
+		<property name="CEO" value="Alexander Guy"/>
+		<property name="description" value="Record in comp fix"/>
+		<property name="web" value="http://www.Olive.com"/>
+		<property name="phone" value="1827574"/>
+		<property name="email" value="olive@mail.com"/>
+		<property name="incorporated" value="false"/>
+		<property name="stars" value="3"/>
+	</bean>
+	
+	<bean id="companyRecord03" class="acme.entities.companyRecords.CompanyRecord">
+		<property name="company" value="Softsci, Inc."/>
+		<property name="sector" value="Web"/>
+		<property name="CEO" value="Arnold González"/>
+		<property name="description" value="Record in web"/>
+		<property name="web" value="http://www.Softsci.com"/>
+		<property name="phone" value="+9 1234962549"/>
+		<property name="email" value="softsci@mail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<bean id="companyRecord04" class="acme.entities.companyRecords.CompanyRecord">
+		<property name="company" value="Picordi"/>
+		<property name="sector" value="Web"/>
+		<property name="CEO" value="Marta Pedrera"/>
+		<property name="description" value="Record in digital marketing"/>
+		<property name="web" value="http://www.Picordi.com"/>
+		<property name="phone" value="+921 (4949) 1234963549"/>
+		<property name="email" value="picordi@mail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="4"/>		
+	</bean>
+	
+	<bean id="companyRecord05" class="acme.entities.companyRecords.CompanyRecord">
+		<property name="company" value="Acmonson"/>
+		<property name="sector" value="Audit"/>
+		<property name="CEO" value="Paco Valdemoro"/>
+		<property name="description" value="Record in security"/>
+		<property name="web" value="http://www.Acmonson.com"/>
+		<property name="phone" value="+921 (4949) 1234962549"/>
+		<property name="email" value="acmonson@mail.com"/>
+		<property name="incorporated" value="true"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<!-- Investor records -->
+	
+	<bean id="investorRecord01" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Paco Fernández"/>
+		<property name="sector" value="Web"/>
+		<property name="statement" value="Statement for web record"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<bean id="investorRecord02" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Joseph Joestar"/>
+		<property name="sector" value="Audit"/>
+		<property name="statement" value="Statement for audit record"/>
+		<property name="stars" value="4"/>		
+	</bean>
+	
+	<bean id="investorRecord03" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Robert Speedwagon"/>
+		<property name="sector" value="Apps"/>
+		<property name="statement" value="Statement for apps record"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<bean id="investorRecord04" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Daniela Johnson"/>
+		<property name="sector" value="Apps"/>
+		<property name="statement" value="Statement for apps record"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<bean id="investorRecord05" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Pedro Seco"/>
+		<property name="sector" value="Apps"/>
+		<property name="statement" value="Statement for apps record"/>
+		<property name="stars" value="2"/>		
+	</bean>
+	
+	<bean id="investorRecord06" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Marcos Rodríguez"/>
+		<property name="sector" value="Audit"/>
+		<property name="statement" value="Statement for audit record"/>
+		<property name="stars" value="4"/>		
+	</bean>
+	
+	<bean id="investorRecord07" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Juan Juanez"/>
+		<property name="sector" value="Web"/>
+		<property name="statement" value="Statement for web record"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<bean id="investorRecord08" class="acme.entities.investorRecords.InvestorRecord">
+		<property name="investor" value="Pablo Caballero"/>
+		<property name="sector" value="Marketing"/>
+		<property name="statement" value="Statement for marketing record"/>
+		<property name="stars" value="5"/>		
+	</bean>
+	
+	<!-- Challenges -->
+	
+	<bean id="challenge01" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Capture the flag"/>
+		<property name="deadline" value="2020/06/20 12:00"/>
+		<property name="description" value="Capture the Flag (CTF) is a special kind of information security competitions."/>
+		<property name="goldGoal" value="Capture the flag in 10 minutes"/>
+		<property name="silverGoal" value="Capture the flag in 20 minutes"/>
+		<property name="bronzeGoal" value="Capture the flag in 30 minutes"/>
+		<property name="goldReward" value="250.0 EUR"/>
+		<property name="silverReward" value="150.0 EUR"/>
+		<property name="bronzeReward" value="50.0 EUR"/>
+		
+	</bean>
+	
+	<bean id="challenge02" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Big data analytics"/>
+		<property name="deadline" value="2020/06/11 22:30"/>
+		<property name="description" value="To provide the best value to the organization."/>
+		<property name="goldGoal" value="Provide the best value, detect issues and improve the system"/>
+		<property name="silverGoal" value="Provide the best value and detect issues"/>
+		<property name="bronzeGoal" value="Provide the best value"/>
+		<property name="goldReward" value="1250.0 EUR"/>
+		<property name="silverReward" value="1150.0 EUR"/>
+		<property name="bronzeReward" value="650.0 EUR"/>					
+	</bean>
+	
+	<bean id="challenge03" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Automatic translation with machine learning"/>
+		<property name="deadline" value="2020/05/21 11:45"/>
+		<property name="description" value="To produce a efficient machine learning translator."/>
+		<property name="goldGoal" value="Produce a machine learning translator with 90% of accuracy"/>
+		<property name="silverGoal" value="Produce a machine learning translator with 80% of accuracy"/>
+		<property name="bronzeGoal" value="Produce a machine learning translator with 50% of accuracy"/>
+		<property name="goldReward" value="4000.0 EUR"/>
+		<property name="silverReward" value="1800.0 EUR"/>
+		<property name="bronzeReward" value="200.0 EUR"/>
+	</bean>
+
+	<!-- Banner -->
+
+	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://www.tumblr.com/search/mosaic%20bikes"/>
+		<property name="slogan" value="We make the best bikes!"/>
+		<property name="URL" value="https://www.tumblr.com"/>
+		<property name="holder" value="Anselmo Rocoso Quintero"/>
+		<property name="expirationMonth" value="11"/>
+		<property name="expirationYear" value="22"/>
+		<property name="creditCardNumber" value="4916164401239057"/>
+		<property name="brand" value="VISA"/>
+		<property name="CVV" value="2134"/>
+		
+	</bean>	
+	
+	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://micromys.tumblr.com/post/174069181959/sierra-our-angel-dinosaur-she-came-to-us-becauses"/>
+		<property name="slogan" value="We take care of your eagle!"/>
+		<property name="URL" value="https://www.tumblr.com"/>
+		<property name="jingle" value="your eagle is safe, ask us and don't be afraid!"/>
+	</bean>		
+		
+	<!-- Providers -->
+	
+	<bean name="provider01" class="acme.entities.roles.Provider">
+		<property name="userAccount">
+			<ref bean="providerUserAccount" />
+		</property>
+		<property name="company" value="Providacme.Inc"></property>
+		<property name="sector" value="Apps"></property>
+	</bean>	
+	
+	<bean name="providerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="provider" />
+		<property name="password" value="provider" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Provider" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="provider@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="providerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	 
+	<bean name="providerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="providerUserAccount" />
+	</bean>
+	
+	<!-- Consumers -->
+	
+	<bean name="consumer01" class="acme.entities.roles.Consumer">
+		<property name="userAccount">
+			<ref bean="consumerUserAccount" />
+		</property>
+		<property name="company" value="Providacme.Inc"></property>
+		<property name="sector" value="Apps"></property>
+	</bean>
+	
+	<bean name="consumerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="consumer" />
+		<property name="password" value="consumer" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Consumer" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="consumer@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="consumerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	 
+	<bean name="consumerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="consumerUserAccount" />
+	</bean>
+	
+</beans>
