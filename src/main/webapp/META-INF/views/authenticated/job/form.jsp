@@ -24,6 +24,7 @@
 	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description"/>
 	<acme:form-textbox code="authenticated.job.form.label.duty-list" path="dutyList"/>
+	<acme:form-checkbox code="authenticated.job.form.label.finalMode" path="finalMode"/>
 	
 	<acme:form-return code="authenticated.job.form.button.return"/>
 </acme:form>

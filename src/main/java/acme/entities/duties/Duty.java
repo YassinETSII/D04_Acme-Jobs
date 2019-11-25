@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -27,6 +28,7 @@ public class Duty extends DomainEntity {
 	@NotBlank
 	private String				description;
 
+	@NotNull
 	@Min(0)
 	@Max(100)
 	private Integer				timePercentage;

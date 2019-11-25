@@ -16,6 +16,6 @@ public interface AuthenticatedJobRepository extends AbstractRepository {
 	@Query("select j from Job j where j.id = ?1")
 	Job findOneJobById(int id);
 
-	@Query("select j from Job j where j.status = 'published' and j.deadline > ?1")
+	@Query("select j from Job j where j.finalMode = true and j.deadline > ?1")
 	Collection<Job> findManyAll(Date d);
 }

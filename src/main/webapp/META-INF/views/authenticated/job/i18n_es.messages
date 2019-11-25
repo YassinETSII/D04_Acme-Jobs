@@ -10,13 +10,13 @@
 
 ########################################### Feature: autenticado muestra su trabajo.
 authenticated.job.form.label.reference = Referencia:
-authenticated.job.form.label.status = Estado:
 authenticated.job.form.label.title = Título:
 authenticated.job.form.label.deadline = Fecha de vencimiento:
 authenticated.job.form.label.salary = Salario:
 authenticated.job.form.label.moreInfo = Más información:
 authenticated.job.form.label.description = Descripción:
 authenticated.job.form.label.duty-list = Deberes:
+authenticated.job.form.label.finalMode = Publicado
 authenticated.job.form.button.return = Volver
 
 ########################################### Feature: autenticado lista sus trabajos.

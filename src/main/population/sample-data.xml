@@ -621,7 +621,6 @@
 	
 	<bean name="job1" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB1"/>
-		<property name="status" value="published"/>
 		<property name="title" value="Title 1"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 15,000.98"/>
@@ -634,7 +633,6 @@
 	
 	<bean name="job2" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB2"/>
-		<property name="status" value="published"/>
 		<property name="title" value="Title 2"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 20,000.00"/>
@@ -647,7 +645,6 @@
 	
 	<bean name="job3" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP1-JOB3"/>
-		<property name="status" value="published"/>
 		<property name="title" value="Title 3"/>
 		<property name="deadline" value="2017/12/11 23:59"/>
 		<property name="salary" value="€ 10,000.00"/>
@@ -660,20 +657,18 @@
 	
 	<bean name="job4" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP2-JOB1"/>
-		<property name="status" value="draft"/>
 		<property name="title" value="Title 4"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 20,000.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet."/>
 		<property name="moreInfo" value="http://www.example.com"/>
-		<property name="finalMode" value="true"/>
+		<property name="finalMode" value="false"/>
 		<property name="employer" ref="employer2Employer"/>
 		<property name="descriptor" ref="job4Descriptor"/>
 	</bean>
 	
 	<bean name="job5" class="acme.entities.jobs.Job">
 		<property name="reference" value="EMP2-JOB2"/>
-		<property name="status" value="published"/>
 		<property name="title" value="Title 5"/>
 		<property name="deadline" value="2030/12/11 23:59"/>
 		<property name="salary" value="€ 15,000.00"/>
