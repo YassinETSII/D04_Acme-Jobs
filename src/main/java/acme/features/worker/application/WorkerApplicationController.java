@@ -1,5 +1,5 @@
 
-package acme.features.employer.job;
+package acme.features.worker.application;
 
 import javax.annotation.PostConstruct;
 
@@ -8,21 +8,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
-import acme.entities.jobs.Job;
-import acme.entities.roles.Employer;
+import acme.entities.applications.Application;
+import acme.entities.roles.Worker;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/employer/job/")
-public class EmployerJobController extends AbstractController<Employer, Job> {
+@RequestMapping("/worker/application/")
+public class WorkerApplicationController extends AbstractController<Worker, Application> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EmployerJobListMineService	listMineService;
+	private WorkerApplicationListMineService	listMineService;
 	@Autowired
-	private EmployerJobShowService		showService;
+	private WorkerApplicationShowService		showService;
 
 
 	// Constructors -----------------------------------------------------------

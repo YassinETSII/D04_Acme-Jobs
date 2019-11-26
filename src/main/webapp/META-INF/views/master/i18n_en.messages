@@ -93,7 +93,12 @@ master.menu.consumer.offer.create = Create offer
 # master.menu.employer ##########################################################
 
 master.menu.employer = Employer
-master.menu.employer.job.list = List jobs
+master.menu.employer.job.list-mine = List my jobs
+
+# master.menu.worker ##########################################################
+
+master.menu.worker = Worker
+master.menu.worker.application.list-mine = List my applications
 
 # master.menu.user-account ####################################################
 

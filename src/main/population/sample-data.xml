@@ -677,6 +677,122 @@
 		<property name="descriptor" ref="job5Descriptor"/>
 	</bean>	
 	
+	<!-- Workers -->
+	
+	<bean name="worker1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker1" />
+		<property name="password" value="worker1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="One" />
+				<property name="email" value="worker1@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker1Worker" />
+				<ref bean="worker1Authenticated" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean name="worker1Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Qualif W 1" />
+		<property name="skills" value="Skills W 1" />
+		<property name="userAccount" ref="worker1UserAccount" />	
+	</bean>
+	
+	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker1UserAccount" />
+	</bean>
+	
+	<bean name="worker2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker2" />
+		<property name="password" value="worker2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Two" />
+				<property name="email" value="worker2@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="worker2Worker" />
+				<ref bean="worker2Authenticated" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean name="worker2Worker" class="acme.entities.roles.Worker">
+		<property name="qualifications" value="Qualif W 2" />
+		<property name="skills" value="Skills W 2" />
+		<property name="userAccount" ref="worker2UserAccount" />	
+	</bean>
+	
+	<bean name="worker2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="worker2UserAccount" />
+	</bean>
+	
+	<!-- Applications -->
+	
+	<bean id="job1app1" class="acme.entities.applications.Application">
+		<property name="reference" value="EMP1-JOB1-WOR1"/>
+		<property name="moment" value="2018/12/11 23:59"/>
+		<property name="status" value="accepted"/>
+		<property name="statement" value="Statement 1"/>
+		<property name="skills" value="Skills 1"/>
+		<property name="qualifications" value="Qualif 1"/>
+		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job01"/>
+	</bean>
+	
+	<bean id="job2app1" class="acme.entities.applications.Application">
+		<property name="reference" value="EMP1-JOB2-WOR1"/>
+		<property name="moment" value="2016/12/11 23:59"/>
+		<property name="status" value="pending"/>
+		<property name="statement" value="Statement 2"/>
+		<property name="skills" value="Skills 2"/>
+		<property name="qualifications" value="Qualif 2"/>
+		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job02"/>
+	</bean>
+	
+	<bean id="job2app2" class="acme.entities.applications.Application">
+		<property name="reference" value="EMP1-JOB2-WOR2"/>
+		<property name="moment" value="2017/10/11 23:59"/>
+		<property name="status" value="accepted"/>
+		<property name="statement" value="Statement 3"/>
+		<property name="skills" value="Skills 3"/>
+		<property name="qualifications" value="Qualif 3"/>
+		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job02"/>
+	</bean>
+	
+	<bean id="job3app1" class="acme.entities.applications.Application">
+		<property name="reference" value="EMP1-JOB3-WOR1"/>
+		<property name="moment" value="2015/10/11 23:59"/>
+		<property name="status" value="rejected"/>
+		<property name="statement" value="Statement 4"/>
+		<property name="skills" value="Skills 4"/>
+		<property name="qualifications" value="Qualif 4"/>
+		<property name="worker" ref="worker1Worker"/>
+		<property name="job" ref="job03"/>
+	</bean>
+	
+	<bean id="job4app1" class="acme.entities.applications.Application">
+		<property name="reference" value="EMP2-JOB4-WOR2"/>
+		<property name="moment" value="2017/03/11 23:59"/>
+		<property name="status" value="pending"/>
+		<property name="statement" value="Statement 5"/>
+		<property name="skills" value="Skills 5"/>
+		<property name="qualifications" value="Qualif 5"/>
+		<property name="worker" ref="worker2Worker"/>
+		<property name="job" ref="job04"/>
+	</bean>
 
 	
 </beans>
