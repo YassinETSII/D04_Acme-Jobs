@@ -527,6 +527,94 @@
 		<property name="userAccount" ref="employer2UserAccount" />
 	</bean>
 	
+	<!-- Duties -->
+	
+	<bean name="job1Duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 1"/>
+		<property name="description" value="Description 1"/>
+		<property name="timePercentage" value="20"/>
+	</bean>
+	
+	<bean name="job1Duty2" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 2"/>
+		<property name="description" value="Description 2"/>
+		<property name="timePercentage" value="40"/>
+	</bean>
+	
+	<bean name="job2Duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 3"/>
+		<property name="description" value="Description 3"/>
+		<property name="timePercentage" value="70"/>
+	</bean>
+	
+	<bean name="job3Duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 4"/>
+		<property name="description" value="Description 4"/>
+		<property name="timePercentage" value="10"/>
+	</bean>
+	
+	<bean name="job3Duty2" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 5"/>
+		<property name="description" value="Description 5"/>
+		<property name="timePercentage" value="40"/>
+	</bean>
+	
+	<bean name="job4Duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 6"/>
+		<property name="description" value="Description 6"/>
+		<property name="timePercentage" value="50"/>
+	</bean>
+	
+	<bean name="job5Duty1" class="acme.entities.duties.Duty">
+		<property name="title" value="Title 7"/>
+		<property name="description" value="Description 7"/>
+		<property name="timePercentage" value="80"/>
+	</bean>
+	
+	<!-- Descriptors -->
+	
+	<bean name="job1Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="duties">
+			<list>
+				<ref bean="job1Duty1"/>
+				<ref bean="job1Duty2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="job2Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="duties">
+			<list>
+				<ref bean="job2Duty1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="job3Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="duties">
+			<list>
+				<ref bean="job3Duty1"/>
+				<ref bean="job3Duty2"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="job4Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="duties">
+			<list>
+				<ref bean="job4Duty1"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="job5Descriptor" class="acme.entities.descriptors.Descriptor">
+		<property name="duties">
+			<list>
+				<ref bean="job5Duty1"/>
+			</list>
+		</property>
+	</bean>
+	
 	<!-- Jobs -->
 	
 	<bean id="job01" class="acme.entities.jobs.Job">
@@ -538,6 +626,7 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="job1Descriptor"/>
 	</bean>	
 	
 	<bean id="job02" class="acme.entities.jobs.Job">
@@ -549,6 +638,7 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="job2Descriptor"/>
 	</bean>		
 	
 	<bean id="job03" class="acme.entities.jobs.Job">
@@ -560,6 +650,7 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer1Employer"/>
+		<property name="descriptor" ref="job3Descriptor"/>
 	</bean>		
 	
 	<bean id="job04" class="acme.entities.jobs.Job">
@@ -571,6 +662,7 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
+		<property name="descriptor" ref="job4Descriptor"/>
 	</bean>		
 	
 	<bean id="job05" class="acme.entities.jobs.Job">
@@ -582,6 +674,9 @@
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
 		<property name="employer" ref="employer2Employer"/>
+		<property name="descriptor" ref="job5Descriptor"/>
 	</bean>	
+	
+
 	
 </beans>
