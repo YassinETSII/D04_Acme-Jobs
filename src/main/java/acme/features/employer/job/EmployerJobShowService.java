@@ -20,7 +20,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 	EmployerJobRepository repository;
 
 
-	// AbstractShowService<Anonymous, Announcement> interface --------------
+	// AbstractShowService<Employer, Job> interface --------------
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
@@ -49,6 +49,11 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
+
+		int idJob = entity.getId();
+		model.setAttribute("idJob", idJob);
+		String duties = "employer/duty/list?idJob=" + idJob;
+		model.setAttribute("duties", duties);
 
 	}
 

@@ -8,18 +8,19 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-########################################### Feature: authenticated shows his/her job.
+########################################### Feature: authenticated shows a job.
 authenticated.job.form.label.reference = Reference:
 authenticated.job.form.label.title = Title:
 authenticated.job.form.label.deadline = Deadline:
 authenticated.job.form.label.salary = Salary:
 authenticated.job.form.label.moreInfo = More Info:
 authenticated.job.form.label.description = Description:
-authenticated.job.form.label.duty-list = Duties:
 authenticated.job.form.label.finalMode = Published
+authenticated.job.form.button.list-duties = List duties
+
 authenticated.job.form.button.return = Return
 
-########################################### Feature: authenticated lists his/her jobs.
+########################################### Feature: authenticated lists jobs.
 authenticated.job.list.label.reference = Reference
 authenticated.job.list.label.deadline = Deadline
 authenticated.job.list.label.title = Title

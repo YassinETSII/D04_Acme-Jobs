@@ -22,8 +22,8 @@
 	<acme:form-money code="authenticated.job.form.label.salary" path="salary"/>
 	<acme:form-url code="authenticated.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="authenticated.job.form.label.description" path="description"/>
-	<acme:form-textarea code="authenticated.job.form.label.duty-list" path="dutyList"/>
 	<acme:form-checkbox code="authenticated.job.form.label.finalMode" path="finalMode"/>
+	<a href="${duties}" type="button" class="btn btn-default"><acme:message code="authenticated.job.form.button.list-duties"/></a>
 	
 	<acme:form-return code="authenticated.job.form.button.return"/>
 </acme:form>

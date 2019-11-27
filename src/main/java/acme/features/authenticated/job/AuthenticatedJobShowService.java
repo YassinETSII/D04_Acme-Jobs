@@ -1,12 +1,9 @@
 
 package acme.features.authenticated.job;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -28,7 +25,15 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int jobId;
+		Job job;
+
+		jobId = request.getModel().getInteger("id");
+		job = this.repository.findOneJobById(jobId);
+		result = job.isFinalMode() == true;
+
+		return result;
 	}
 
 	@Override
@@ -40,17 +45,10 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
 
-		StringBuilder buffer;
-		Collection<Duty> duties;
-		duties = entity.getDescriptor().getDuties();
-		buffer = new StringBuilder();
-		for (Duty duty : duties) {
-			buffer.append("[" + "Duty - " + duty.getTitle() + ", " + "Description: " + duty.getDescription() + ", " + "Time percentage per week: " + duty.getTimePercentage()).append("]");
-			buffer.append("\r\n");
-
-		}
-
-		model.setAttribute("dutyList", buffer.toString());
+		int idJob = entity.getId();
+		model.setAttribute("idJob", idJob);
+		String duties = "authenticated/duty/list?idJob=" + idJob;
+		model.setAttribute("duties", duties);
 
 	}
 
@@ -63,7 +61,6 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneJobById(id);
-		result.getDescriptor().getDuties().size();
 
 		return result;
 	}
