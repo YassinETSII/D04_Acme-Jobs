@@ -36,6 +36,7 @@ master.menu.authenticated.investorRecord.list = List investor records
 master.menu.authenticated.request.list = List requests
 master.menu.authenticated.offer.list = List offers
 master.menu.authenticated.challenge.list = List challenges
+master.menu.authenticated.job.list = List jobs
 
 # master.menu.anonymous #######################################################
 
@@ -92,7 +93,8 @@ master.menu.consumer.offer.create = Create offer
 # master.menu.employer ##########################################################
 
 master.menu.employer = Employer
-master.menu.employer.job.list = List jobs
+master.menu.employer.job.listMine = List my jobs
+master.menu.employer.application.listMine = List my applications
 
 # master.menu.user-account ####################################################
 

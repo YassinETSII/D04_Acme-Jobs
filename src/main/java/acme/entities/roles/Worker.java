@@ -1,5 +1,5 @@
 /*
- * Employer.java
+ * Worker.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Employer extends UserRole {
+public class Worker extends UserRole {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -31,10 +31,10 @@ public class Employer extends UserRole {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	private String				company;
+	private String				qualifications;
 
 	@NotBlank
-	private String				sector;
+	private String				skills;
 
 	// Derived attributes -----------------------------------------------------
 
