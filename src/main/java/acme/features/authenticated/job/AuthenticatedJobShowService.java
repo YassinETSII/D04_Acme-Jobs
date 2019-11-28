@@ -50,6 +50,9 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		String duties = "authenticated/duty/list?idJob=" + idJob;
 		model.setAttribute("duties", duties);
 
+		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
+		model.setAttribute("auditRecords", auditRecords);
+
 	}
 
 	@Override

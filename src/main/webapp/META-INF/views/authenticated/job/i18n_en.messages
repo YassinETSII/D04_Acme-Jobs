@@ -17,6 +17,7 @@ authenticated.job.form.label.moreInfo = More Info:
 authenticated.job.form.label.description = Description:
 authenticated.job.form.label.finalMode = Published
 authenticated.job.form.button.list-duties = List duties
+authenticated.job.form.button.list-audit-records = List audit records
 
 authenticated.job.form.button.return = Return
 

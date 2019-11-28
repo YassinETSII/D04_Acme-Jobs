@@ -8,12 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-########################################### Feature: employer lists a job.
+########################################### Feature: employer lists jobs.
 employer.job.list.label.reference = Reference
 employer.job.list.label.deadline = Deadline
 employer.job.list.label.title = Title
 
-########################################### Feature: employer shows a jobs.
+########################################### Feature: employer shows a job.
 employer.job.form.label.reference = Reference:
 employer.job.form.label.title = Title:
 employer.job.form.label.deadline = Deadline:
@@ -23,4 +23,5 @@ employer.job.form.label.description = Description:
 employer.job.form.label.finalMode = Published
 
 employer.job.form.button.list-duties = List duties
+employer.job.form.button.list-audit-records = List audit records
 employer.job.form.button.return = Return

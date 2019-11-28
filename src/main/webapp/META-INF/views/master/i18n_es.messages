@@ -101,6 +101,12 @@ master.menu.employer.application.listMine = Listar mis aplicaciones
 master.menu.worker = Trabajador
 master.menu.worker.application.list-mine = Listar mis aplicaciones
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.job.list-mine = Listar trabajos que he auditado
+master.menu.auditor.job.list-not-mine = Listar trabajos que no he auditado
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

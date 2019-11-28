@@ -25,6 +25,7 @@
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-checkbox code="employer.job.form.label.finalMode" path="finalMode"/>
 	<a href="${duties}" type="button" class="btn btn-default"><acme:message code="employer.job.form.button.list-duties"/></a>
+	<a href="${auditRecords}" type="button" class="btn btn-default"><acme:message code="employer.job.form.button.list-audit-records"/></a>
 	
 	<acme:form-return code="employer.job.form.button.return"/>	
 </acme:form>

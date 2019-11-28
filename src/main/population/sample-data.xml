@@ -763,4 +763,111 @@
 		<property name="job" ref="job04"/>
 	</bean>
 	
+	<!-- Auditors -->
+	
+	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="auditor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="One" />
+				<property name="email" value="auditor1@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor1Auditor" />
+				<ref bean="auditor1Authenticated" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Firm A 1" />
+		<property name="responsibilityStatement" value="Statement A 1" />
+		<property name="userAccount" ref="auditor1UserAccount" />	
+	</bean>
+	
+	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor1UserAccount" />
+	</bean>
+	
+	<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor2" />
+		<property name="password" value="auditor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Two" />
+				<property name="email" value="auditor2@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditor2Auditor" />
+				<ref bean="auditor2Authenticated" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean name="auditor2Auditor" class="acme.entities.roles.Auditor">
+		<property name="firm" value="Firm A 2" />
+		<property name="responsibilityStatement" value="Statement A 2" />
+		<property name="userAccount" ref="auditor2UserAccount" />	
+	</bean>
+	
+	<bean name="auditor2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditor2UserAccount" />
+	</bean>
+	
+	<!-- Audit Records -->
+	
+	<bean id="job1audit1" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Title 1"/>
+		<property name="moment" value="2018/12/11 23:59"/>
+		<property name="body" value="Body 1"/>
+		<property name="finalMode" value="true"/>
+		<property name="auditor" ref="auditor1Auditor"/>
+		<property name="job" ref="job01"/>
+	</bean>
+	
+	<bean id="job1audit2" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Title 2"/>
+		<property name="moment" value="2018/11/11 23:59"/>
+		<property name="body" value="Body 2"/>
+		<property name="finalMode" value="true"/>
+		<property name="auditor" ref="auditor2Auditor"/>
+		<property name="job" ref="job01"/>
+	</bean>
+	
+	<bean id="job2audit1" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Title 3"/>
+		<property name="moment" value="2018/12/11 23:59"/>
+		<property name="body" value="Body 3"/>
+		<property name="finalMode" value="true"/>
+		<property name="auditor" ref="auditor1Auditor"/>
+		<property name="job" ref="job02"/>
+	</bean>
+	
+	<bean id="job2audit2" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Title 4"/>
+		<property name="moment" value="2018/10/11 23:59"/>
+		<property name="body" value="Body 4"/>
+		<property name="finalMode" value="false"/>
+		<property name="auditor" ref="auditor2Auditor"/>
+		<property name="job" ref="job02"/>
+	</bean>
+	
+	<bean id="job3audit1" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Title 5"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+		<property name="body" value="Body 5"/>
+		<property name="finalMode" value="true"/>
+		<property name="auditor" ref="auditor1Auditor"/>
+		<property name="job" ref="job03"/>
+	</bean>
+	
 </beans>

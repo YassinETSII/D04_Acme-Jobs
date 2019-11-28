@@ -1,26 +1,25 @@
 
-package acme.features.employer.job;
+package acme.features.auditor.job;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
-import acme.entities.roles.Employer;
+import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EmployerJobShowService implements AbstractShowService<Employer, Job> {
+public class AuditorJobShowService implements AbstractShowService<Auditor, Job> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	EmployerJobRepository repository;
+	AuditorJobRepository repository;
 
 
-	// AbstractShowService<Employer, Job> interface --------------
+	// AbstractShowService<Auditor, Job> interface --------------
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
@@ -29,14 +28,10 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		boolean result;
 		int jobId;
 		Job job;
-		Employer employer;
-		Principal principal;
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
-		employer = job.getEmployer();
-		principal = request.getPrincipal();
-		result = job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId();
+		result = job.isFinalMode() == true;
 
 		return result;
 	}
@@ -52,7 +47,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 
 		int idJob = entity.getId();
 		model.setAttribute("idJob", idJob);
-		String duties = "employer/duty/list?idJob=" + idJob;
+		String duties = "authenticated/duty/list?idJob=" + idJob;
 		model.setAttribute("duties", duties);
 
 		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
