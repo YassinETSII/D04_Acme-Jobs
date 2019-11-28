@@ -107,8 +107,12 @@
 			<acme:menu-separator/>	
 			<acme:menu-suboption code="master.menu.employer.application.listMine" action="/employer/application/list-mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">
+			<acme:menu-suboption code="master.menu.worker.application.list-mine" action="/worker/application/list-mine"/>
+		</acme:menu-option>
 	</acme:menu-left>
-
+	
 	<acme:menu-right>
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
 		<acme:menu-option code="master.menu.sign-in" action="/master/sign-in" access="isAnonymous()"/>

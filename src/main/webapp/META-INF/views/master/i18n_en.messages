@@ -96,6 +96,11 @@ master.menu.employer = Employer
 master.menu.employer.job.listMine = List my jobs
 master.menu.employer.application.listMine = List my applications
 
+# master.menu.worker ##########################################################
+
+master.menu.worker = Worker
+master.menu.worker.application.list-mine = List my applications
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
