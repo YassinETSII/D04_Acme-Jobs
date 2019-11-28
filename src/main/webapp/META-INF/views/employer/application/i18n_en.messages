@@ -10,7 +10,7 @@
 
 ########################################### Feature: employer shows an application.
 employer.application.form.label.reference = Reference:
-employer.application.form.label.moment = Moment:
+employer.application.form.label.moment = Moment of creation:
 employer.application.form.label.status = Status:
 employer.application.form.label.statement = Statement:
 employer.application.form.label.skills = Skills:
@@ -22,5 +22,5 @@ employer.application.form.button.return = Return
 
 ########################################### Feature: employer lists applications.
 employer.application.list.label.reference = Reference
-employer.application.list.label.moment = Moment
+employer.application.list.label.moment = Moment of creation
 employer.application.list.label.status = Status
