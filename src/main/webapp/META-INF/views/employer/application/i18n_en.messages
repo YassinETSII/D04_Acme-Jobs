@@ -16,7 +16,7 @@ employer.application.form.label.statement = Statement:
 employer.application.form.label.skills = Skills:
 employer.application.form.label.qualifications = Qualifications:
 employer.application.form.label.job = Job Reference:
-employer.application.form.label.applicatorWorker = Applicator worker:
+employer.application.form.label.applierWorker = Applier worker:
 
 employer.application.form.button.return = Return
 
