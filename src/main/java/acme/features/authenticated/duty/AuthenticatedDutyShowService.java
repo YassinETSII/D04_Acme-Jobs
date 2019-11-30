@@ -25,7 +25,15 @@ public class AuthenticatedDutyShowService implements AbstractShowService<Authent
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int jobId;
+		Duty dutyJob;
+
+		jobId = request.getModel().getInteger("id");
+		dutyJob = this.repository.findOneDutyById(jobId);
+		result = dutyJob.getJob().isFinalMode() == true;
+
+		return result;
 	}
 
 	@Override
