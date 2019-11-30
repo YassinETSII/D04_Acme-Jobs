@@ -50,7 +50,7 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 		String duties = "authenticated/duty/list?idJob=" + idJob;
 		model.setAttribute("duties", duties);
 
-		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
+		String auditRecords = "auditor/audit-record/list?idJob=" + idJob;
 		model.setAttribute("auditRecords", auditRecords);
 
 	}

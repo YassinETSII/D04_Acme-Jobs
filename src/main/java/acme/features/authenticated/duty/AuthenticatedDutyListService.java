@@ -27,7 +27,10 @@ public class AuthenticatedDutyListService implements AbstractListService<Authent
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		Collection<Duty> duties = this.repository.findManyDutiesByJobId(request.getModel().getInteger("idJob"));
+		result = duties.stream().allMatch(d -> d.getJob().isFinalMode() == true);
+		return result;
 	}
 
 	@Override
