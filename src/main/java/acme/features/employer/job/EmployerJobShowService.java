@@ -19,9 +19,10 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 	@Autowired
 	EmployerJobRepository repository;
 
-
 	// AbstractShowService<Employer, Job> interface --------------
 
+
+	//An employer principal can not have access to a not finalMode job from another employer
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;

@@ -18,9 +18,10 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 	@Autowired
 	AuthenticatedJobRepository repository;
 
-
 	// AbstractShowService<Authenticated, Job> interface --------------
 
+
+	//An authenticated principal can not have access to a not finalMode job
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;

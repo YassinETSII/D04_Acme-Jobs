@@ -20,9 +20,10 @@ public class AuthenticatedDutyListService implements AbstractListService<Authent
 	@Autowired
 	AuthenticatedDutyRepository repository;
 
-
 	// AbstractListService<Authenticated, Duty> interface --------------
 
+
+	//An authenticated principal can not list the duties of a not finalMode job
 	@Override
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;

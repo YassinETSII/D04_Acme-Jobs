@@ -8,6 +8,7 @@ import acme.entities.duties.Duty;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -18,14 +19,28 @@ public class EmployerDutyShowService implements AbstractShowService<Employer, Du
 	@Autowired
 	EmployerDutyRepository repository;
 
-
 	// AbstractShowService<Employer, Duty> interface --------------
 
+
+	//An employer principal can not have access to a duty of a not finalMode job from another employer
 	@Override
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int jobId;
+		Duty dutyJob;
+		Employer employer;
+		Principal principal;
+
+		jobId = request.getModel().getInteger("id");
+		dutyJob = this.repository.findOneDutyById(jobId);
+		employer = dutyJob.getJob().getEmployer();
+		principal = request.getPrincipal();
+
+		result = dutyJob.getJob().isFinalMode() || !dutyJob.getJob().isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override

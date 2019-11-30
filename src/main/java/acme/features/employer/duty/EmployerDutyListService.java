@@ -23,9 +23,10 @@ public class EmployerDutyListService implements AbstractListService<Employer, Du
 	@Autowired
 	EmployerDutyRepository repository;
 
-
 	// AbstractListService<Employer, Duty> interface --------------
 
+
+	//An employer principal can not list the duties of a not finalMode job from another employer
 	@Override
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
