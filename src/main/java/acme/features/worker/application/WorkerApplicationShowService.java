@@ -19,9 +19,10 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 	@Autowired
 	WorkerApplicationRepository repository;
 
-
 	// AbstractShowService<Worker, Application> interface --------------
 
+
+	//A worker can not have access to an application of another worker
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
