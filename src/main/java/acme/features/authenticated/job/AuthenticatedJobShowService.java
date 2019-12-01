@@ -18,9 +18,10 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 	@Autowired
 	AuthenticatedJobRepository repository;
 
-
 	// AbstractShowService<Authenticated, Job> interface --------------
 
+
+	//An authenticated principal can not have access to a not finalMode job
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
@@ -49,6 +50,9 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		model.setAttribute("idJob", idJob);
 		String duties = "authenticated/duty/list?idJob=" + idJob;
 		model.setAttribute("duties", duties);
+
+		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
+		model.setAttribute("auditRecords", auditRecords);
 
 	}
 

@@ -8,12 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-########################################### Feature: empleado lista un trabajo.
+########################################### Feature: empleado lista trabajos.
 employer.job.list.label.reference = Referencia
 employer.job.list.label.deadline = Fecha de vencimiento
 employer.job.list.label.title = Título
 
-########################################### Feature: empleado muestra trabajos.
+########################################### Feature: empleado muestra un trabajo.
 employer.job.form.label.reference = Referencia:
 employer.job.form.label.title = Título:
 employer.job.form.label.deadline = Fecha de vencimiento:
@@ -23,4 +23,5 @@ employer.job.form.label.description = Descripción:
 employer.job.form.label.finalMode = Publicado
 
 employer.job.form.button.list-duties = Listar deberes
+employer.job.form.button.list-audit-records= Listar registros de auditoría
 employer.job.form.button.return = Volver

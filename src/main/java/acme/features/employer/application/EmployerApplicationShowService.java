@@ -19,9 +19,10 @@ public class EmployerApplicationShowService implements AbstractShowService<Emplo
 	@Autowired
 	EmployerApplicationRepository repository;
 
-
 	// AbstractShowService<Employer, Application> interface --------------
 
+
+	//An employer can not have access to an application of another employer
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;

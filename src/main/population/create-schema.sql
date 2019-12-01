@@ -11,7 +11,7 @@
         `version` integer not null,
         `moment` datetime(6),
         `more_info` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1024),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -30,10 +30,31 @@
         `qualifications` varchar(255),
         `reference` varchar(255),
         `skills` varchar(255),
-        `statement` varchar(255),
+        `statement` varchar(1024),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(1024),
+        `final_mode` bit not null,
+        `moment` datetime(6),
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `responsibility_statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -60,7 +81,7 @@
         `bronze_reward_amount` double precision,
         `bronze_reward_currency` varchar(255),
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `gold_goal` varchar(255),
         `gold_reward_amount` double precision,
         `gold_reward_currency` varchar(255),
@@ -91,7 +112,7 @@
         `version` integer not null,
         `ceo` varchar(255),
         `company` varchar(255),
-        `description` varchar(255),
+        `description` varchar(1024),
         `email` varchar(255),
         `incorporated` bit,
         `phone` varchar(255),
@@ -114,14 +135,14 @@
        `id` integer not null,
         `version` integer not null,
         `spam_threshold` double precision,
-        `spam_words` varchar(255),
+        `spam_words` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `duty` (
        `id` integer not null,
         `version` integer not null,
-        `description` varchar(255),
+        `description` varchar(1024),
         `time_percentage` integer,
         `title` varchar(255),
         `job_id` integer not null,
@@ -143,7 +164,7 @@
         `investor` varchar(255),
         `sector` varchar(255),
         `stars` integer,
-        `statement` varchar(255),
+        `statement` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -151,7 +172,7 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `description` varchar(255),
+        `description` varchar(1024),
         `final_mode` bit not null,
         `more_info` varchar(255),
         `reference` varchar(255),
@@ -192,7 +213,7 @@
         `min_reward_amount` double precision,
         `min_reward_currency` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1024),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -214,7 +235,7 @@
         `moment` datetime(6),
         `reward_amount` double precision,
         `reward_currency` varchar(255),
-        `text` varchar(255),
+        `text` varchar(1024),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -307,6 +328,21 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 

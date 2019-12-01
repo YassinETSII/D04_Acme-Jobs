@@ -19,9 +19,10 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 	@Autowired
 	EmployerJobRepository repository;
 
-
 	// AbstractShowService<Employer, Job> interface --------------
 
+
+	//An employer principal can not have access to a not finalMode job from another employer
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
@@ -54,6 +55,9 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		model.setAttribute("idJob", idJob);
 		String duties = "employer/duty/list?idJob=" + idJob;
 		model.setAttribute("duties", duties);
+
+		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
+		model.setAttribute("auditRecords", auditRecords);
 
 	}
 

@@ -3,6 +3,7 @@ package acme.entities.challenges;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.Table;
@@ -39,6 +40,7 @@ public class Challenge extends DomainEntity {
 	private Date				deadline;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				description;
 
 	@NotBlank

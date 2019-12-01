@@ -20,14 +20,18 @@ public class AuthenticatedDutyListService implements AbstractListService<Authent
 	@Autowired
 	AuthenticatedDutyRepository repository;
 
-
 	// AbstractListService<Authenticated, Duty> interface --------------
 
+
+	//An authenticated principal can not list the duties of a not finalMode job
 	@Override
 	public boolean authorise(final Request<Duty> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		Collection<Duty> duties = this.repository.findManyDutiesByJobId(request.getModel().getInteger("idJob"));
+		result = duties.stream().allMatch(d -> d.getJob().isFinalMode() == true);
+		return result;
 	}
 
 	@Override
