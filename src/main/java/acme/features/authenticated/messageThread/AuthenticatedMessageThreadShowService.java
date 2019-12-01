@@ -2,6 +2,8 @@
 package acme.features.authenticated.messageThread;
 
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import acme.entities.messages.Message;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -28,7 +31,18 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 	public boolean authorise(final Request<MessageThread> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		Principal principal;
+		LinkedList<Authenticated> listAuth = new LinkedList<>();
+
+		principal = request.getPrincipal();
+		int id = request.getModel().getInteger("id");
+		Collection<Message> mess = this.repository.findManyMessagesByMessageThreadId(id);
+		listAuth.addAll(mess.stream().map(m -> m.getUser()).collect(Collectors.toList()));
+
+		result = listAuth.stream().anyMatch(a -> a.getUserAccount().getId() == principal.getAccountId());
+
+		return result;
 	}
 
 	@Override
