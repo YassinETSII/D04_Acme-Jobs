@@ -18,9 +18,10 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 	@Autowired
 	AuditorJobRepository repository;
 
-
 	// AbstractShowService<Auditor, Job> interface --------------
 
+
+	//An auditor principal can not have access to a not finalMode job
 	@Override
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;

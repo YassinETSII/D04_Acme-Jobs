@@ -19,9 +19,10 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 	@Autowired
 	AuditorAuditRecordRepository repository;
 
-
 	// AbstractShowService<Auditor, AuditRecord> interface --------------
 
+
+	///An auditor principal can not have access to a not finalMode audit record from another auditor
 	@Override
 	public boolean authorise(final Request<AuditRecord> request) {
 		assert request != null;

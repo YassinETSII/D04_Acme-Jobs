@@ -877,13 +877,4 @@
 		<property name="job" ref="job03"/>
 	</bean>
 	
-	<bean id="job6audit1" class="acme.entities.auditRecords.AuditRecord">
-		<property name="title" value="Title 6"/>
-		<property name="moment" value="2017/12/11 23:59"/>
-		<property name="body" value="Body 6"/>
-		<property name="finalMode" value="true"/>
-		<property name="auditor" ref="auditor1Auditor"/>
-		<property name="job" ref="job06"/>
-	</bean>
-	
 </beans>
