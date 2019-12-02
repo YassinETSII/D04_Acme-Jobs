@@ -12,6 +12,7 @@
 authenticated.messageThread.form.label.title = Título:
 authenticated.messageThread.form.label.moment = Momento de creación:
 authenticated.messageThread.form.label.userNameList = Usuarios involucrados:
+authenticated.messageThread.form.button.list-messages = Listar mensajes
 
 authenticated.messageThread.form.button.return = Volver
 

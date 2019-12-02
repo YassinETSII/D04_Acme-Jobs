@@ -16,10 +16,11 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="authenticated.messageThread.form.label.title" path="title"/>
-	<acme:form-moment code="authenticated.messageThread.form.label.moment" path="moment"/>
-	<acme:form-textarea code="authenticated.messageThread.form.label.userNameList" path="userNameList"/>
-	<a href="${messages}" type="button" class="btn btn-default"><acme:message code="authenticated.messageThread.form.button.list-messages"/></a>
+	<acme:form-textbox code="authenticated.message.form.label.title" path="title"/>
+	<acme:form-moment code="authenticated.message.form.label.moment" path="moment"/>
+	<acme:form-textbox code="authenticated.message.form.label.tags" path="tags"/>
+	<acme:form-textarea code="authenticated.message.form.label.body" path="body"/>
+	<acme:form-textbox code="authenticated.message.form.label.userName" path="user.identity.fullName"/>
 	
-	<acme:form-return code="authenticated.messageThread.form.button.return"/>
+	<acme:form-return code="authenticated.message.form.button.return"/>
 </acme:form>

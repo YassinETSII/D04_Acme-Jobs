@@ -37,6 +37,7 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 
 		principal = request.getPrincipal();
 		int id = request.getModel().getInteger("id");
+
 		Collection<Message> mess = this.repository.findManyMessagesByMessageThreadId(id);
 		listAuth.addAll(mess.stream().map(m -> m.getUser()).collect(Collectors.toList()));
 
@@ -61,6 +62,11 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 			buffer.append(" ");
 		}
 		model.setAttribute("userNameList", buffer.toString());
+
+		int idMessageThread = entity.getId();
+		model.setAttribute("idMessageThread", idMessageThread);
+		String messages = "authenticated/message/list?idMessageThread=" + idMessageThread;
+		model.setAttribute("messages", messages);
 	}
 
 	@Override
