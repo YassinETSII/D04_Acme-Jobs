@@ -877,4 +877,40 @@
 		<property name="job" ref="job03"/>
 	</bean>
 	
+	<!-- Message Threads -->
+	
+	<bean id="messageThread01" class="acme.entities.messageThreads.MessageThread">
+		<property name="title" value="Title 1"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+	</bean>
+	
+	<!-- Messages -->
+	
+	<bean id="message01" class="acme.entities.messages.Message">
+		<property name="title" value="Title 1"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+		<property name="tags" value="tag1, tag2, tag3"/>
+		<property name="body" value="this is a pretty message"/>
+		<property name="user" ref="consumer1Authenticated"/>
+		<property name="messageThread" ref="messageThread01"/>
+	</bean>
+	
+	<bean id="message02" class="acme.entities.messages.Message">
+		<property name="title" value="Title 2"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+		<property name="tags" value="tag1, tag2, tag3"/>
+		<property name="body" value="this is a pretty message"/>
+		<property name="user" ref="provider1Authenticated"/>			
+		<property name="messageThread" ref="messageThread01"/>		
+	</bean>
+	
+	<bean id="message03" class="acme.entities.messages.Message">
+		<property name="title" value="Title 3"/>
+		<property name="moment" value="2017/12/11 23:59"/>
+		<property name="tags" value="tag1, tag2, tag3"/>
+		<property name="body" value="this is a pretty message"/>
+		<property name="user" ref="employer1Authenticated"/>	
+		<property name="messageThread" ref="messageThread01"/>		
+	</bean>
+	
 </beans>
