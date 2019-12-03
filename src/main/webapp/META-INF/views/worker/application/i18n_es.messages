@@ -15,6 +15,7 @@ worker.application.form.label.status = Estado:
 worker.application.form.label.statement = Declaración:
 worker.application.form.label.skills = Habilidades:
 worker.application.form.label.qualifications = Aptitudes:
+worker.application.form.label.job.reference = Referencia del trabajo:
 
 worker.application.form.label.job = Mostrar trabajo
 

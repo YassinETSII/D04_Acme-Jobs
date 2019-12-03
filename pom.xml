@@ -19,7 +19,7 @@
 
 	<groupId>acme</groupId>
 	<artifactId>Acme-Jobs</artifactId>
-	<version>3.2</version>
+	<version>4.0</version>
 	<packaging>war</packaging>
 
 	<name>Acme Jobs, Inc.</name>
