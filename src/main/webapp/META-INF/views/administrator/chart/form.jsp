@@ -30,6 +30,20 @@
 	<acme:message code="administrator.chart.form.title.investor"/>
 	</h2>
 	<canvas id="myChart2"></canvas>
+	<br>
+	<br>
+	<br>
+	<h2>
+	<acme:message code="administrator.chart.form.title.ratioJobs"/>
+	</h2>
+	<canvas id="myChart3"></canvas>
+	<br>
+	<br>
+	<br>
+	<h2>
+	<acme:message code="administrator.chart.form.title.ratioApplications"/>
+	</h2>
+	<canvas id="myChart4"></canvas>		
 	</div>
 	
 	<script type="text/javascript">
@@ -135,6 +149,162 @@
 	}
 	
 	var ctx = document.getElementById('myChart2').getContext('2d');
+	var myChart2 = new Chart(ctx, {
+	    type: 'bar',
+	    data: {
+	        labels,
+	        datasets: [{
+	            data,
+	            backgroundColor: [
+	            	'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(199, 103, 103, 0.2)',
+	                'rgba(112, 134, 206, 0.2)',
+	                'rgba(60, 235, 182, 0.2)',
+	                'rgba(176, 235, 60, 0.2)',
+	                'rgba(235, 206, 60, 0.2)',
+	                'rgba(235, 60, 130, 0.2)',
+	                'rgba(113, 62, 152, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	            	'rgba(255, 99, 132, 1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(199, 103, 103, 1)',
+	                'rgba(112, 134, 206, 1)',
+	                'rgba(60, 235, 182, 1)',
+	                'rgba(176, 235, 60, 1)',
+	                'rgba(235, 206, 60, 1)',
+	                'rgba(235, 60, 130, 1)',
+	                'rgba(113, 62, 152, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	    	legend: {display:false},
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero: true
+	                }
+	            }]
+	        }
+	    }
+	});
+
+	</script>
+
+	<script type="text/javascript">
+
+	var ratiojobs = new Array();
+	<jstl:forEach items="${ratioOfJobs}" var="ratioJobsItem">
+		ratiojobs.push("${ratioJobsItem}");
+	</jstl:forEach>
+	
+	var finalmod = new Array();
+	<jstl:forEach items="${finalMode}" var="finalModeItem">
+		finalmod.push("${finalModeItem}");
+	</jstl:forEach>
+		
+ 	var labels = [];
+	var i;
+	for (i = 0; i < finalmod.length; i++) {
+		labels.push(finalmod[i]);
+	}
+	
+	var data = [];
+	var j;
+	for (j = 0; j < ratiojobs.length; j++) {
+		data.push(ratiojobs[j]);
+	}
+	
+	var ctx = document.getElementById('myChart3').getContext('2d');
+	var myChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: {
+	        labels,
+	        datasets: [{
+	            data,
+	            backgroundColor: [
+	                'rgba(255, 99, 132, 0.2)',
+	                'rgba(54, 162, 235, 0.2)',
+	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(75, 192, 192, 0.2)',
+	                'rgba(153, 102, 255, 0.2)',
+	                'rgba(199, 103, 103, 0.2)',
+	                'rgba(112, 134, 206, 0.2)',
+	                'rgba(60, 235, 182, 0.2)',
+	                'rgba(176, 235, 60, 0.2)',
+	                'rgba(235, 206, 60, 0.2)',
+	                'rgba(235, 60, 130, 0.2)',
+	                'rgba(113, 62, 152, 0.2)',
+	                'rgba(255, 159, 64, 0.2)'
+	            ],
+	            borderColor: [
+	                'rgba(255, 99, 132, 1)',
+	                'rgba(54, 162, 235, 1)',
+	                'rgba(255, 206, 86, 1)',
+	                'rgba(75, 192, 192, 1)',
+	                'rgba(153, 102, 255, 1)',
+	                'rgba(199, 103, 103, 1)',
+	                'rgba(112, 134, 206, 1)',
+	                'rgba(60, 235, 182, 1)',
+	                'rgba(176, 235, 60, 1)',
+	                'rgba(235, 206, 60, 1)',
+	                'rgba(235, 60, 130, 1)',
+	                'rgba(113, 62, 152, 1)',
+	                'rgba(255, 159, 64, 1)'
+	            ],
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	    	legend: {display:false},
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero: true
+	                }
+	            }]
+	        }
+	    }
+	});
+	
+	</script>	
+	
+	<script type="text/javascript">
+	
+	var appstatus = new Array();
+	<jstl:forEach items="${ApplicationStatus}" var="ApplicationStatusItem">
+		appstatus.push("${ApplicationStatusItem}");
+	</jstl:forEach>
+	
+	var appratio = new Array();
+	<jstl:forEach items="${ratioOfApplications}" var="ratioOfApplicationsItem">
+		appratio.push("${ratioOfApplicationsItem}");
+	</jstl:forEach>
+	
+ 	var labels = [];
+	var i;
+	for (i = 0; i < appstatus.length; i++) {
+		labels.push(appstatus[i]);
+	}
+	
+	var data = [];
+	var j;
+	for (j = 0; j < appratio.length; j++) {
+		data.push(appratio[j]);
+	}
+	
+	var ctx = document.getElementById('myChart4').getContext('2d');
 	var myChart2 = new Chart(ctx, {
 	    type: 'bar',
 	    data: {

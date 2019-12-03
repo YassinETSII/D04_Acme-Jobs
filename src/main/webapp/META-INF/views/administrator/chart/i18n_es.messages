@@ -12,4 +12,6 @@
 
 administrator.chart.form.title.company = Número total de compañías agrupadas por sector
 administrator.chart.form.title.investor = Número total de inversores agrupados por sector
+administrator.chart.form.title.ratioJobs = Ratio de trabajos agrupados por estado
+administrator.chart.form.title.ratioApplications = Ratio de aplicaciones agrupadas por estado
 administrator.chart.form.button.return = Volver

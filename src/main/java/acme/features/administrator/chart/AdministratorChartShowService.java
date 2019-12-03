@@ -38,7 +38,7 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "companySector", "companyNumber", "investorSector", "investorNumber");
+		request.unbind(entity, model, "companySector", "companyNumber", "investorSector", "investorNumber", "finalMode", "ratioOfJobs", "ApplicationStatus", "ratioOfApplications");
 
 	}
 
@@ -51,6 +51,10 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 		List<String> companySector = new LinkedList<>();
 		List<Long> investorNumber = new LinkedList<>();
 		List<String> investorSector = new LinkedList<>();
+		List<Double> ratioOfJobs = new LinkedList<>();
+		List<String> finalMode = new LinkedList<>();
+		List<String> ApplicationStatus = new LinkedList<>();
+		List<Double> ratioOfApplications = new LinkedList<>();
 		//--------------------------------------------------companies
 		Collection<Object[]> companies = this.repository.numCompaniesBySector();
 
@@ -67,6 +71,29 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 
 		result.setInvestorNumber(investorNumber);
 		result.setInvestorSector(investorSector);
+		//--------------------------------------------------jobs
+		Collection<Object[]> jobs = this.repository.ratioOfJobsGroupedByStatus();
+
+		jobs.stream().forEach(j -> ratioOfJobs.add((Double) j[0]));
+
+		for (Object[] j : jobs) {
+			if ((Boolean) j[1] == true) {
+				finalMode.add("Final mode");
+			} else {
+				finalMode.add("Draf mode");
+			}
+		}
+
+		result.setRatioOfJobs(ratioOfJobs);
+		result.setFinalMode(finalMode);
+		//--------------------------------------------------applications
+		Collection<Object[]> applications = this.repository.ratioOfApplicationsGroupedByStatus();
+
+		applications.stream().forEach(a -> ratioOfApplications.add((Double) a[0]));
+		applications.stream().forEach(a -> ApplicationStatus.add((String) a[1]));
+
+		result.setRatioOfApplications(ratioOfApplications);
+		result.setApplicationStatus(ApplicationStatus);
 
 		return result;
 	}

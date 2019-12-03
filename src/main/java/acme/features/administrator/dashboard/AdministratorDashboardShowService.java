@@ -39,7 +39,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, "numberAnnouncements", "numberCompanyRecords", "numberInvestorRecords", "minimumNumberOfRewardsOfActiveRequests", "maximumNumberOfRewardsOfActiveRequests", "averageNumberOfRewardsOfActiveRequests",
-			"standardDesviationNumberOfRewardsOfActiveRequests", "minimumNumberOfRewardsOfActiveOffers", "maximumNumberOfRewardsOfActiveOffers", "averageNumberOfRewardsOfActiveOffers", "standardDesviationNumberOfRewardsOfActiveOffers");
+			"standardDesviationNumberOfRewardsOfActiveRequests", "minimumNumberOfRewardsOfActiveOffers", "maximumNumberOfRewardsOfActiveOffers", "averageNumberOfRewardsOfActiveOffers", "standardDesviationNumberOfRewardsOfActiveOffers",
+			"averageNumberOfJobsPerEmployer", "averageNumberOfApplicationsPerEmployer", "averageNumberOfApplicationsPerWorker");
 
 	}
 
@@ -64,6 +65,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setMaximumNumberOfRewardsOfActiveOffers(this.repository.maximumNumberOfRewardsOfActiveOffers(d));
 		result.setAverageNumberOfRewardsOfActiveOffers(this.repository.averageNumberOfRewardsOfActiveOffers(d));
 		result.setStandardDesviationNumberOfRewardsOfActiveOffers(this.repository.standardDesviationNumberOfRewardsOfActiveOffers(d));
+
+		result.setAverageNumberOfJobsPerEmployer(this.repository.averageNumberOfJobsPerEmployer());
+		result.setAverageNumberOfApplicationsPerEmployer(this.repository.averageNumberOfApplicationsPerEmployer());
+		result.setAverageNumberOfApplicationsPerWorker(this.repository.averageNumberOfApplicationsPerWorker());
 
 		return result;
 	}
