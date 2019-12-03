@@ -64,10 +64,6 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		}
 		model.setAttribute("userNameList", buffer.toString());
 
-		int idMessageThread = entity.getId();
-		model.setAttribute("idMessageThread", idMessageThread);
-		String messages = "authenticated/message/list?idMessageThread=" + idMessageThread;
-		model.setAttribute("messages", messages);
 	}
 
 	@Override

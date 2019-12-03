@@ -306,13 +306,16 @@
 
     insert into `hibernate_sequence` values ( 1 );
 create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
+create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status`);
 
     alter table `application` 
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
+create index IDX9mf3mtdy6wve4sjuqrlejalq6 on `audit_record` (`final_mode`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX9pkce3d1y6w47wadap5s5xptc on `company_record` (`stars`);
 create index IDXk2t3uthe649ao1jllcuks0gv4 on `investor_record` (`stars`);
-create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
+create index IDXrr7tnj8h1bfv46pnsq6lwvxqd on `job` (`deadline`, `final_mode`);
+create index IDXt84ibbldao4ngscmvo7ja0es on `job` (`final_mode`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);

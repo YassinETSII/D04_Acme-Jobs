@@ -24,8 +24,9 @@
 	<acme:form-url code="employer.job.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 	<acme:form-checkbox code="employer.job.form.label.finalMode" path="finalMode"/>
-	<a href="${auditRecords}" type="button" class="btn btn-default"><acme:message code="employer.job.form.button.list-audit-records"/></a>
+	
 	<acme:form-submit code="employer.job.form.button.list-duties" action="/employer/duty/list?idJob=${id}" method="get" />
+	<acme:form-submit code="employer.job.form.button.list-audit-records" action="/authenticated/audit-record/list?idJob=${id}" method="get" />
 	
 	<acme:form-return code="employer.job.form.button.return"/>	
 </acme:form>

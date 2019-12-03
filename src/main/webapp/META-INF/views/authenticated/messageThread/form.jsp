@@ -19,7 +19,7 @@
 	<acme:form-textbox code="authenticated.messageThread.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.messageThread.form.label.moment" path="moment"/>
 	<acme:form-textarea code="authenticated.messageThread.form.label.userNameList" path="userNameList"/>
-	<a href="${messages}" type="button" class="btn btn-default"><acme:message code="authenticated.messageThread.form.button.list-messages"/></a>
+	<acme:form-submit code="authenticated.messageThread.form.button.list-messages" action="/authenticated/message/list?idMessageThread=${id}" method="get" />
 	
 	<acme:form-return code="authenticated.messageThread.form.button.return"/>
 </acme:form>
