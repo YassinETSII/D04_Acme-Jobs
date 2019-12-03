@@ -555,7 +555,7 @@
 		<property name="reference" value="EMP1-JOB3"/>
 		<property name="title" value="Title 3"/>
 		<property name="deadline" value="2020/12/11 23:59"/>
-		<property name="salary" value="$ 22,000.00"/>
+		<property name="salary" value="EUR 22,000.00"/>
 		<property name="description" value="Lorem ipsum sit dolor amet."/>
 		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="finalMode" value="true"/>
