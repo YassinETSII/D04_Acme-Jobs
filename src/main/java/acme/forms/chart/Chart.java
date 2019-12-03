@@ -23,4 +23,9 @@ public class Chart implements Serializable {
 	List<String>				investorSector;
 	List<Long>					investorNumber;
 
+	List<String>				finalMode;
+	List<Double>				ratioOfJobs;
+
+	List<String>				ApplicationStatus;
+	List<Double>				ratioOfApplications;
 }

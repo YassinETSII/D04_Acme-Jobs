@@ -30,5 +30,9 @@
 	<acme:form-double code="administrator.dashboard.form.label.averageNumberOfRewardsOfActiveOffers" path="averageNumberOfRewardsOfActiveOffers"/>
 	<acme:form-double code="administrator.dashboard.form.label.standardDesviationNumberOfRewardsOfActiveOffers" path="standardDesviationNumberOfRewardsOfActiveOffers"/>
 	
+	<acme:form-double code="administrator.dashboard.form.label.averageNumberOfJobsPerEmployer" path="averageNumberOfJobsPerEmployer"/>
+	<acme:form-double code="administrator.dashboard.form.label.averageNumberOfApplicationsPerEmployer" path="averageNumberOfApplicationsPerEmployer"/>
+	<acme:form-double code="administrator.dashboard.form.label.averageNumberOfApplicationsPerWorker" path="averageNumberOfApplicationsPerWorker"/>	
+	
 	<acme:form-return code="administrator.dashboard.form.button.return"/>
 </acme:form>

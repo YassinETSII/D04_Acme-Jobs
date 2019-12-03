@@ -30,4 +30,8 @@ public class Dashboard implements Serializable {
 	Double						averageNumberOfRewardsOfActiveOffers;
 	Double						standardDesviationNumberOfRewardsOfActiveOffers;
 
+	Double						averageNumberOfJobsPerEmployer;
+	Double						averageNumberOfApplicationsPerEmployer;
+	Double						averageNumberOfApplicationsPerWorker;
+
 }
