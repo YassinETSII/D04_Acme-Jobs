@@ -607,14 +607,14 @@
 	<bean name="job1Duty2" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 2"/>
 		<property name="description" value="Description 2"/>
-		<property name="timePercentage" value="40"/>
+		<property name="timePercentage" value="80"/>
 		<property name="job" ref="job01" />
 	</bean>
 	
 	<bean name="job2Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 3"/>
 		<property name="description" value="Description 3"/>
-		<property name="timePercentage" value="70"/>
+		<property name="timePercentage" value="100"/>
 		<property name="job" ref="job02" />
 	</bean>
 	
@@ -628,28 +628,28 @@
 	<bean name="job3Duty2" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 5"/>
 		<property name="description" value="Description 5"/>
-		<property name="timePercentage" value="40"/>
+		<property name="timePercentage" value="90"/>
 		<property name="job" ref="job03" />
 	</bean>
 	
 	<bean name="job4Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 6"/>
 		<property name="description" value="Description 6"/>
-		<property name="timePercentage" value="50"/>
+		<property name="timePercentage" value="100"/>
 		<property name="job" ref="job04" />		
 	</bean>
 	
 	<bean name="job5Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 7"/>
 		<property name="description" value="Description 7"/>
-		<property name="timePercentage" value="80"/>
+		<property name="timePercentage" value="100"/>
 		<property name="job" ref="job05" />				
 	</bean>
 	
 	<bean name="job6Duty1" class="acme.entities.duties.Duty">
 		<property name="title" value="Title 8"/>
 		<property name="description" value="Description 8"/>
-		<property name="timePercentage" value="80"/>
+		<property name="timePercentage" value="100"/>
 		<property name="job" ref="job06" />				
 	</bean>
 	
