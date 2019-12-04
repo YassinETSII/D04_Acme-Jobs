@@ -108,6 +108,11 @@ master.menu.auditor = Auditor
 master.menu.auditor.job.list-mine = List jobs I recorded an audit
 master.menu.auditor.job.list-not-mine = List jobs I didn't record an audit
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercialBanner.list-mine = List my commercial banners
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

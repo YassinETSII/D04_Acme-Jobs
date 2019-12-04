@@ -108,6 +108,11 @@ master.menu.auditor = Auditor
 master.menu.auditor.job.list-mine = Listar trabajos que he auditado
 master.menu.auditor.job.list-not-mine = Listar trabajos que no he auditado
 
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.commercialBanner.list-mine = Listar mis banners comerciales
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
