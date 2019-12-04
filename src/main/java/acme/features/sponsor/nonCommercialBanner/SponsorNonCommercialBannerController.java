@@ -1,5 +1,5 @@
 
-package acme.features.sponsor.NonCommercialBanner;
+package acme.features.sponsor.nonCommercialBanner;
 
 import javax.annotation.PostConstruct;
 
