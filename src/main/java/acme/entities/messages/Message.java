@@ -3,6 +3,7 @@ package acme.entities.messages;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -40,6 +41,7 @@ public class Message extends DomainEntity {
 	private String				tags;
 
 	@NotBlank
+	@Column(length = 1024)
 	private String				body;
 
 	// Relationships ------------------------------------------------------------

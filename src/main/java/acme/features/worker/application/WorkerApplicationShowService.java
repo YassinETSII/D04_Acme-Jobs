@@ -50,6 +50,9 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		request.unbind(entity, model, "reference", "moment", "status");
 		request.unbind(entity, model, "statement", "skills", "qualifications", "job.reference");
 
+		int idJob = entity.getJob().getId();
+		model.setAttribute("idJob", idJob);
+
 	}
 
 	@Override

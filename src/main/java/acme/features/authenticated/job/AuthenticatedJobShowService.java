@@ -46,14 +46,6 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
 
-		int idJob = entity.getId();
-		model.setAttribute("idJob", idJob);
-		String duties = "authenticated/duty/list?idJob=" + idJob;
-		model.setAttribute("duties", duties);
-
-		String auditRecords = "authenticated/audit-record/list?idJob=" + idJob;
-		model.setAttribute("auditRecords", auditRecords);
-
 	}
 
 	@Override

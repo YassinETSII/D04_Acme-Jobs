@@ -3,6 +3,7 @@ package acme.features.authenticated.messageThread;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 
 		boolean result;
 		Principal principal;
-		LinkedList<Authenticated> listAuth = new LinkedList<>();
+		List<Authenticated> listAuth = new LinkedList<>();
 
 		principal = request.getPrincipal();
 		int id = request.getModel().getInteger("id");
@@ -63,10 +64,6 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		}
 		model.setAttribute("userNameList", buffer.toString());
 
-		int idMessageThread = entity.getId();
-		model.setAttribute("idMessageThread", idMessageThread);
-		String messages = "authenticated/message/list?idMessageThread=" + idMessageThread;
-		model.setAttribute("messages", messages);
 	}
 
 	@Override

@@ -118,6 +118,11 @@
 			<acme:menu-suboption code="master.menu.auditor.job.list-mine" action="/auditor/job/list-mine"/>
 			<acme:menu-suboption code="master.menu.auditor.job.list-not-mine" action="/auditor/job/list-not-mine"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.commercialBanner.list-mine" action="/sponsor/commercial-banner/list-mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.nonCommercialBanner.list-mine" action="/sponsor/non-commercial-banner/list-mine"/>
+		</acme:menu-option>
 	</acme:menu-left>
 	
 	<acme:menu-right>

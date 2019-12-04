@@ -80,7 +80,7 @@ public class AdministratorChartShowService implements AbstractShowService<Admini
 			if ((Boolean) j[1] == true) {
 				finalMode.add("Final mode");
 			} else {
-				finalMode.add("Draf mode");
+				finalMode.add("Draft mode");
 			}
 		}
 
