@@ -104,6 +104,7 @@
         `expiration_month` integer,
         `expiration_year` integer,
         `holder` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -128,6 +129,18 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `cvv` varchar(255),
+        `brand` varchar(255),
+        `credit_card_number` varchar(255),
+        `expiration_month` integer,
+        `expiration_year` integer,
+        `holder` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -197,7 +210,7 @@
     create table `message` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `tags` varchar(255),
         `title` varchar(255),
@@ -221,6 +234,7 @@
         `picture` varchar(255),
         `slogan` varchar(255),
         `jingle` varchar(255),
+        `sponsor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -275,7 +289,16 @@
         `version` integer not null,
         `author` varchar(255),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(1024),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `organisation` varchar(255),
+        `credit_card_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -372,6 +395,11 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `commercial_banner` 
+       add constraint `FKd0k52g7lcacefcp62kb4p9aor` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -402,8 +430,23 @@ create index IDXlrvsw21ylkdqa1shrkwg1yssx on `request` (`deadline`);
        foreign key (`user_id`) 
        references `authenticated` (`id`);
 
+    alter table `non_commercial_banner` 
+       add constraint `FKpcpr0xb5k7s4rxv5pulstt5v9` 
+       foreign key (`sponsor_id`) 
+       references `sponsor` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint `FK28mvxtnmfjcwiw34vs8ryqkpa` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 

@@ -31,6 +31,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `commercial_banner` 
+       drop 
+       foreign key `FKd0k52g7lcacefcp62kb4p9aor`;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
@@ -55,9 +59,21 @@
        drop 
        foreign key `FKik4epe9dp5q6uenarfyia7xin`;
 
+    alter table `non_commercial_banner` 
+       drop 
+       foreign key `FKpcpr0xb5k7s4rxv5pulstt5v9`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `sponsor` 
+       drop 
+       foreign key `FK28mvxtnmfjcwiw34vs8ryqkpa`;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `worker` 
        drop 
@@ -87,6 +103,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `credit_card`;
+
     drop table if exists `customisation`;
 
     drop table if exists `duty`;
@@ -114,6 +132,8 @@
     drop table if exists `rodriguez_bulletin`;
 
     drop table if exists `shout`;
+
+    drop table if exists `sponsor`;
 
     drop table if exists `user_account`;
 
