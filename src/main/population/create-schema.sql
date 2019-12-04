@@ -318,8 +318,8 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `qualifications` varchar(255),
-        `skills` varchar(255),
+        `qualifications` varchar(1024),
+        `skills` varchar(1024),
         primary key (`id`)
     ) engine=InnoDB;
 

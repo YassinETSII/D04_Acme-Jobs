@@ -18,7 +18,7 @@
 <acme:form>
 	<acme:form-textbox code="sponsor.commercialBanner.form.label.picture" path="picture"/>
 	<acme:form-textbox code="sponsor.commercialBanner.form.label.slogan" path="slogan"/>
-	<acme:form-url code="sponsor.commercialBanner.form.label.URL" path="URL"/>
+	<acme:form-url code="sponsor.commercialBanner.form.label.url" path="URL"/>
 	<acme:form-textbox code="sponsor.commercialBanner.form.label.holder" path="holder"/>
 	<acme:form-integer code="sponsor.commercialBanner.form.label.expirationMonth" path="expirationMonth"/>
 	<acme:form-integer code="sponsor.commercialBanner.form.label.expirationYear" path="expirationYear"/>

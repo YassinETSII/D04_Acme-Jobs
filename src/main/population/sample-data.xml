@@ -971,11 +971,40 @@
 		<property name="userAccount" ref="sponsor2UserAccount" />
 	</bean>
 	
-	<!-- Banner -->
+	<bean name="sponsor3UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor3" />
+		<property name="password" value="sponsor3" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Three" />
+				<property name="email" value="sponsor3@mail.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor3Sponsor" />
+				<ref bean="sponsor3Authenticated" />
+			</list>
+		</property>	
+	</bean>
+	
+	<bean name="sponsor3Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organisation" value="Probably the third best organisation of the world" />
+		<property name="creditCard" ref="creditCard02" />
+		<property name="userAccount" ref="sponsor3UserAccount" />	
+	</bean>
+	
+	<bean name="sponsor3Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor3UserAccount" />
+	</bean>
+	
+	<!-- Banners -->
 
 	<bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
-		<property name="picture" value="https://www.tumblr.com/search/mosaic%20bikes"/>
-		<property name="slogan" value="We make the best bikes!"/>
+		<property name="picture" value="https://www.tumblr.com/commercialBannerSample01"/>
+		<property name="slogan" value="commercial banner slogan sample 1"/>
 		<property name="URL" value="https://www.tumblr.com"/>
 		<property name="holder" value="Anselmo Rocoso Quintero"/>
 		<property name="expirationMonth" value="11"/>
@@ -984,15 +1013,35 @@
 		<property name="brand" value="VISA"/>
 		<property name="CVV" value="2134"/>
 		<property name="sponsor" ref="sponsor1Sponsor" />
-		
+	</bean>	
+	
+	<bean id="commercialBanner02" class="acme.entities.banners.CommercialBanner">
+		<property name="picture" value="https://www.tumblr.com/commercialBannerSample02"/>
+		<property name="slogan" value="commercial banner slogan sample 2"/>
+		<property name="URL" value="https://www.tumblr.com"/>
+		<property name="holder" value="Martina Juanes Pomodoro"/>
+		<property name="expirationMonth" value="09"/>
+		<property name="expirationYear" value="20"/>
+		<property name="creditCardNumber" value="4258549763626089"/>
+		<property name="brand" value="VISA"/>
+		<property name="CVV" value="114"/>
+		<property name="sponsor" ref="sponsor3Sponsor" />
 	</bean>	
 	
 	<bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
-		<property name="picture" value="https://micromys.tumblr.com/post/174069181959/sierra-our-angel-dinosaur-she-came-to-us-becauses"/>
-		<property name="slogan" value="We take care of your eagle!"/>
+		<property name="picture" value="https://www.tumblr.com/NonCommercialBannerSample01"/>
+		<property name="slogan" value="non commercial banner slogan sample 1"/>
 		<property name="URL" value="https://www.tumblr.com"/>
-		<property name="jingle" value="your eagle is safe, ask us and don't be afraid!"/>
+		<property name="jingle" value="a beautiful jingle sample 1"/>
 		<property name="sponsor" ref="sponsor2Sponsor" />
-	</bean>		
+	</bean>	
+	
+		<bean id="nonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
+		<property name="picture" value="https://www.tumblr.com/NonCommercialBannerSample02"/>
+		<property name="slogan" value="non commercial banner slogan sample 2"/>
+		<property name="URL" value="https://www.tumblr.com"/>
+		<property name="jingle" value="a beautiful jingle sample 2"/>
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>	
 	
 </beans>

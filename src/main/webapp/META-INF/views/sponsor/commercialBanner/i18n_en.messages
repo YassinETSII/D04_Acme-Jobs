@@ -11,7 +11,7 @@
 ########################################### Feature: sponsor shows a commercial banner.
 sponsor.commercialBanner.form.label.picture = Picture:
 sponsor.commercialBanner.form.label.slogan = Slogan:
-sponsor.commercialBanner.form.label.URL = URL:
+sponsor.commercialBanner.form.label.url = URL:
 sponsor.commercialBanner.form.label.holder = Holder:
 sponsor.commercialBanner.form.label.expirationMonth = Expiration month:
 sponsor.commercialBanner.form.label.expirationYear = Expiration year:
